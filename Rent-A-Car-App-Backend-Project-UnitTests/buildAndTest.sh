@@ -9,7 +9,7 @@ dotnet test --no-build
 
 send_email() {
     Success=$1
-    ToEmail="lodhia@seattleu.edu"  # Replace with the recipient's email
+    ToEmail="lodhia@seattleu.edu"  
 
     EmailBody=$(cat <<EOF
 Build Succeeded: $Success
@@ -17,7 +17,7 @@ Tests Passed: $Success
 EOF
 )
 
-    # Send email using mail command (you may need to configure mail on your system)
+    # Send email using mail command 
     echo "$EmailBody" | mail -s "Test Suite Status" "$ToEmail"
 }
 
